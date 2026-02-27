@@ -105,7 +105,7 @@ export default function Home() {
           </div>
 
           <h1 className="font-display font-black leading-[.93] tracking-[-0.048em] mb-8 overflow-hidden"
-            style={{fontSize:'clamp(3.4rem,9.5vw,10rem)'}}>
+            style={{fontSize:'clamp(2.4rem,7.5vw,7.5rem)'}}>
             {['We Build', 'Digital', 'Excellence'].map((line, i) => (
               <span key={i} className="block overflow-hidden">
                 <span ref={el => linesRef.current[i] = el}
