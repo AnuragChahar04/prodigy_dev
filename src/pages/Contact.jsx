@@ -58,7 +58,7 @@ export default function Contact() {
             <span className="w-[6px] h-[6px] rounded-full" style={{background:'var(--accent)'}}/>
             Get In Touch
           </div>
-          <h1 ref={titleRef} className="font-display font-black leading-[.93] tracking-[-0.048em]" style={{fontSize:'clamp(3rem,8vw,9rem)'}}>
+          <h1 ref={titleRef} className="font-display font-black leading-[.93] tracking-[-0.048em]" style={{fontSize:'clamp(2rem,6.5vw,7.5rem)'}}>
             <span className="hl block overflow-hidden" style={{color:'var(--ink)'}}>Let's build</span>
             <span className="hl block overflow-hidden italic" style={{color:'var(--accent)'}}>something great</span>
           </h1>
