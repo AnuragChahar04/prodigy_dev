@@ -58,7 +58,7 @@ export default function About() {
             <span className="w-[6px] h-[6px] rounded-full" style={{background:'var(--accent)'}}/>
             Our Story
           </div>
-          <h1 ref={titleRef} className="font-display font-black leading-[.93] tracking-[-0.048em]" style={{fontSize:'clamp(3rem,8.5vw,9rem)'}}>
+          <h1 ref={titleRef} className="font-display font-black leading-[.93] tracking-[-0.048em]" style={{fontSize:'clamp(1rem,5.5vw,6rem)'}}>
             <span className="hl block overflow-hidden" style={{color:'var(--ink)'}}>About</span>
             <span className="hl block overflow-hidden italic" style={{color:'var(--accent)'}}>ProdigyDev</span>
           </h1>
