@@ -94,7 +94,7 @@ export default function Home() {
 
         {/* Big decorative BG letters */}
         <div className="absolute top-[22%] right-[2%] font-display font-black pointer-events-none leading-none select-none z-[1]"
-          style={{fontSize:'clamp(6rem,18vw,18rem)', color:'rgba(17,16,9,.03)'}}>PD</div>
+          style={{fontSize:'clamp(5rem,16vw,16rem)', color:'rgba(17,16,9,.03)'}}>PD</div>
 
         {/* Content — z-10 so above canvas */}
         <div className="relative z-10">
