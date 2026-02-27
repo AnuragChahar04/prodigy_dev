@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink: #0A0A0F;
+    --acid: #C8FF00;
+    --electric: #6B5CFF;
+    --chalk: #F0EDE8;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #0A0A0F;
+    color: #F0EDE8;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  ::selection {
+    background: #C8FF00;
+    color: #0A0A0F;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0F;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C8FF00;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .text-display {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+  }
+
+  .text-headline {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  .clip-text {
+    overflow: hidden;
+    display: block;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-3 bg-acid text-ink font-display font-700 px-8 py-4 rounded-full text-sm tracking-tight transition-all duration-300;
+  }
+
+  .btn-primary:hover {
+    @apply bg-chalk scale-105;
+    box-shadow: 0 0 40px rgba(200, 255, 0, 0.3);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-3 border border-chalk/20 text-chalk font-display px-8 py-4 rounded-full text-sm tracking-tight transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    @apply border-acid text-acid;
+  }
+
+  .section-label {
+    @apply font-mono text-xs tracking-widest uppercase text-acid/70;
+  }
+
+  .card-dark {
+    @apply bg-ink-muted border border-chalk/5 rounded-2xl overflow-hidden transition-all duration-500;
+  }
+
+  .card-dark:hover {
+    @apply border-acid/20;
+    box-shadow: 0 0 60px rgba(200, 255, 0, 0.05);
+  }
+}
+
+/* Custom cursor */
+#cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: #C8FF00;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background 0.3s;
+  mix-blend-mode: difference;
+}
+
+#cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(200, 255, 0, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s, border-color 0.3s;
+}
+
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor {
+  width: 50px;
+  height: 50px;
+  background: rgba(200, 255, 0, 0.15);
+}
+
+/* Noise texture overlay */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+/* Gradient orb */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* Number ticker */
+.number-ticker {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-inner {
+  animation: marquee 20s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.marquee-inner:hover {
+  animation-play-state: paused;
+}
+
+/* Line animation */
+.line-reveal {
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #C8FF00, transparent);
+  transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.in-view .line-reveal {
+  width: 100%;
+}
+
+/* Input styles */
+.form-input {
+  @apply w-full bg-transparent border-b border-chalk/15 text-chalk py-4 font-body text-base outline-none transition-all duration-300 placeholder-chalk/30;
+}
+
+.form-input:focus {
+  @apply border-acid;
+}
+
+/* Magnetic button effect */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Progress bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #C8FF00, #6B5CFF);
+  z-index: 10000;
+  transform-origin: left;
+  transform: scaleX(0);
+}
