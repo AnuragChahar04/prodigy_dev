@@ -98,11 +98,11 @@ export default function Home() {
 
         {/* Content — z-10 so above canvas */}
         <div className="relative z-10">
-          <div ref={tagRef} className="inline-flex items-center gap-2 px-3 py-[5px] border text-[.72rem] tracking-[.12em] uppercase mb-7 w-fit font-display font-semibold"
+          {/* <div ref={tagRef} className="inline-flex items-center gap-2 px-3 py-[5px] border text-[.72rem] tracking-[.12em] uppercase mb-7 w-fit font-display font-semibold"
             style={{borderColor:'rgba(45,122,69,.35)', color:'var(--accent)'}}>
             <span className="w-[6px] h-[6px] rounded-full" style={{background:'var(--accent)'}} />
             Digital Agency · Est. 2020
-          </div>
+          </div> */}
 
           <h1 className="font-display font-black leading-[.93] tracking-[-0.048em] mb-8 overflow-hidden"
             style={{fontSize:'clamp(2rem,7vw,7rem)'}}>
