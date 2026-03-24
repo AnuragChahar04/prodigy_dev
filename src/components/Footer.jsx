@@ -29,7 +29,7 @@ export default function Footer() {
         {[
           { title: 'Services', items: [['Custom Software','/'],['Company Websites','/'],['Mobile Apps','/'],['Digital Marketing','/'],['Hosting','/']] },
           { title: 'Company', items: [['Home','/'],['About Us','/about'],['Contact','/contact']] },
-          { title: 'Contact', items: [['hello@prodigydev.io','mailto:hello@prodigydev.io',true],['+255 700 000 000','tel:+255700000000',true],['Dar es Salaam, TZ',null]] },
+          { title: 'Contact', items: [['theprodigyd3v@gmail.com','mailto:theprodigyd3v@gmail.com',true],['+91 9266464066','tel:+919266464066',true],['Haryana, IN',null]] },
         ].map(({ title, items }) => (
           <div key={title}>
             <h4 className="text-[.7rem] tracking-[.15em] uppercase mb-5" style={{color:'#4caf70'}}>{title}</h4>
