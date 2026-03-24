@@ -40,10 +40,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <Link to="/contact" className="hidden md:inline-block btn-primary text-[.78rem] py-3 px-5 no-underline">
-          <span>Start a Project</span>
-        </Link>
-
         <button className="md:hidden flex flex-col gap-[5px] bg-transparent border-none cursor-pointer p-1" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span className={`block w-6 h-[2px] bg-ink transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
           <span className={`block w-6 h-[2px] bg-ink transition-all duration-300 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`} />
