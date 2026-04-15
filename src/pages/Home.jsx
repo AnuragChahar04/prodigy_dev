@@ -167,7 +167,7 @@ export default function Home() {
       </section>
 
       {/* ── Stats ─────────────────────────────────────────── */}
-      <section className="py-28 px-[4%] border-t" style={{background:'var(--bg)', borderColor:'var(--border)'}} ref={statsReveal}>
+      {/* <section className="py-28 px-[4%] border-t" style={{background:'var(--bg)', borderColor:'var(--border)'}} ref={statsReveal}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px" style={{background:'var(--border)'}}>
           {[['50+','Projects Delivered'],['30+','Happy Clients'],['5','Years Experience'],['99.9%','Uptime SLA']].map(([num, label]) => (
             <div key={label} className="p-10 reveal" style={{background:'var(--bg)'}}>
@@ -178,7 +178,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ── CTA ───────────────────────────────────────────── */}
       <section
