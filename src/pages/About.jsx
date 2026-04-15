@@ -75,14 +75,14 @@ export default function About() {
               Building the digital future,<br />one product at a time
             </h2>
             <p className="leading-relaxed mb-5 reveal delay-2" style={{color:'var(--ink2)'}}>
-              ProdigyDev was founded in 2020 with a singular vision: create digital products that are not just functional, but transformative. We believe technology should be beautiful, intuitive, and powerful enough to change how businesses operate.
+              ProdigyDev was founded in 2025 with a singular vision: create digital products that are not just functional, but transformative. We believe technology should be beautiful, intuitive, and powerful enough to change how businesses operate.
             </p>
             <p className="leading-relaxed reveal delay-3" style={{color:'var(--ink2)'}}>
               From our base in East Africa, we serve clients globally — bringing world-class development expertise with a deep understanding of emerging market opportunities and global standards.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          {/* <div className="grid grid-cols-2 gap-3">
             {[['50+','Projects Completed'],['30+','Happy Clients'],['5yrs','Experience'],['3','Industry Awards']].map(([num,label],i) => (
               <div key={label} className={`reveal delay-${i+2} p-8 hover:border-accent/40 transition-colors duration-300`}
                 style={{border:'1px solid var(--border)'}}>
@@ -90,7 +90,7 @@ export default function About() {
                 <div className="text-sm" style={{color:'var(--muted)'}}>{label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Vision */}
