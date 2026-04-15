@@ -52,7 +52,7 @@ export default function Footer() {
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-bg/[0.08]">
         <p className="text-bg/25 text-xs">© {new Date().getFullYear()} ProdigyDev. All rights reserved.</p>
-        <p className="text-bg/25 text-xs">Built with passion in East Africa 🌍</p>
+        <p className="text-bg/25 text-xs">Built with passion in India 🌍</p>
       </div>
     </footer>
   )
