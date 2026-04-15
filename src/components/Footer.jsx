@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 
-const socials = [
-  { label: 'TW', href: '#' }, { label: 'LI', href: '#' },
-  { label: 'GH', href: '#' }, { label: 'DR', href: '#' },
-]
+// const socials = [
+//   { label: 'TW', href: '#' }, { label: 'LI', href: '#' },
+//   { label: 'GH', href: '#' }, { label: 'DR', href: '#' },
+// ]
 
 export default function Footer() {
   return (
